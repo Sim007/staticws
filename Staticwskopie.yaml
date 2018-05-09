@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: staticws-deployment
+  labels:
+    app: staticws
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: staticws
+  template:
+    metadata:
+      labels:
+        app: staticws
+    spec:
+      containers:
+      - name: staticws
+        image: sim007/staticws
+        ports:
+        - containerPort: 80

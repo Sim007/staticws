@@ -1,0 +1,36 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: staticws-deployment
+  labels:
+    app: staticws
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: staticws
+  template:
+    metadata:
+      labels:
+        app: staticws
+    spec:
+      containers:
+      - name: staticws
+        image: sim007/staticws
+        ports:
+        - containerPort: 80
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: staticws-service
+spec:
+  selector:
+    app: staticws
+  ports:
+  - protocol: TCP
+    port: 4200
+    targetPort: 80
+  type: LoadBalancer        
