@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: staticws
-        image: sim007/staticws
+        image: sim007/staticws:latest
         ports:
         - containerPort: 80
       nodeSelector:
