@@ -31,6 +31,6 @@ spec:
     app: staticws
   ports:
   - protocol: TCP
-    port: 4200
+    port: 4202
     targetPort: 80
-  type: LoadBalancer        
+  type: NodePort  
