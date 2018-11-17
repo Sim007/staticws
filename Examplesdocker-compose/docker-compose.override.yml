@@ -1,0 +1,6 @@
+version: '3.3'
+services:
+  staticws:
+    image: sim007/staticws:$WebVersion
+    ports:
+    - 4201:80 # ports concatenated
