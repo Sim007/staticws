@@ -13,8 +13,8 @@ spec:
     metadata:
       labels:
         app: staticws
-  spec:
-    containers:
+    spec:
+      containers:
       - name: staticws
         image: sim007/staticws:latest
         ports:
@@ -29,6 +29,6 @@ spec:
     app: staticws
   ports:
   - protocol: TCP
-    port: 4221
+    port: 4223
     targetPort: 80
   type: LoadBalancer 
