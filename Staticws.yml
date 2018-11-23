@@ -1,4 +1,4 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: staticws-deployment
@@ -19,8 +19,6 @@ spec:
         image: sim007/staticws:latest
         ports:
         - containerPort: 80
-      nodeSelector:
-        beta.kubernetes.io/os: linux
 ---
 kind: Service
 apiVersion: v1
@@ -33,4 +31,4 @@ spec:
   - protocol: TCP
     port: 4202
     targetPort: 80
-  type: NodePort  
+  type: LoadBalancer 
