@@ -29,6 +29,6 @@ spec:
     app: staticws
   ports:
   - protocol: TCP
-    port: 4202
+    port: 4221
     targetPort: 80
   type: LoadBalancer 
