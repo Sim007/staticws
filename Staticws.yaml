@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: staticws-deployment
   labels:
-    app: staticws
+    app: staticws  
 spec:
   replicas: 1
   selector:
@@ -13,8 +13,8 @@ spec:
     metadata:
       labels:
         app: staticws
-    spec:
-      containers:
+  spec:
+    containers:
       - name: staticws
         image: sim007/staticws:latest
         ports:
