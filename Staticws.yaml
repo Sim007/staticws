@@ -5,7 +5,7 @@ metadata:
   labels:
     app: staticws  
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: staticws
@@ -18,7 +18,7 @@ spec:
       - name: staticws
         image: sim007/staticws:latest
         ports:
-        - containerPort: 80
+        -  containerPort: 80
 ---
 kind: Service
 apiVersion: v1
