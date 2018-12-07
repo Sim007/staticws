@@ -7,7 +7,6 @@ Ship container to Docker Hub
 Run the container with:
 Docker for Windows
     - Docker CLI
-    - Docker CLI and Docker-compose
     - K8S deploy
 
 
