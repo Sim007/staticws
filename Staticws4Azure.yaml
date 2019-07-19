@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: staticws
-        image: sim007/staticws
+        image: sim007/staticws:20190719.3
         ports:
         - containerPort: 80
 ---             
