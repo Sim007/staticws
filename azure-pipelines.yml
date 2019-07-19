@@ -1,4 +1,6 @@
 # Starter pipeline
+trigger: 'master'
+
 steps:
 - task: Docker@2
   inputs:
@@ -6,4 +8,4 @@ steps:
     repository: 'sim007/staticws'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: '$(Build.BuildNumber)'
+    tags: 'Latest'
