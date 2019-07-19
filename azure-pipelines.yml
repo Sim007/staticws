@@ -6,4 +6,4 @@ steps:
     repository: 'sim007/staticws'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: '$(Build.BuildNumber)'
+    tags: 'Latest'
