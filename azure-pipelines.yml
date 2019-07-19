@@ -9,7 +9,7 @@ steps:
     repository: 'sim007/staticws'
     command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
-    tags: 'Latest'
+    tags: 'latest'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
