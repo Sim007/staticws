@@ -1,4 +1,6 @@
 # Starter pipeline
+trigger: 'master'
+
 steps:
 - task: Docker@2
   inputs:
