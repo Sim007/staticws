@@ -31,26 +31,26 @@ docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
 ```
 Note: <repo> = name on DockerHub
 
-# Run with Docker compose in Docker Desktop CLI 
+## Run with Docker compose in Docker Desktop CLI 
 ```powershell
 cd <directory of repo>
 docker-compose up -d
 ```
 
-# Run with K8S in Docker Desktop with Docker Desktop CLI
+## Run with K8S in Docker Desktop with Docker Desktop CLI
 ```powershell
 cd <directory of repo>
 kubectl -f staticws.yaml
 ```
 
-# Run with K8S in Azure AKS in a CLI
+## Run with K8S in Azure AKS in a CLI
 ```powershell
 cd <directory of repo>
 kubectl -f staticws.yaml
 ```
 Note: you need a Azure account and AKS cluster
 
-# Run in play with Docker
+## Run in play with Docker
 In browser goto https://labs.play-with-docker.com/
 Login and start Virtual machine
 ```powershell
@@ -58,7 +58,7 @@ git clone https://github.com/Sim007/staticws.git
 docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
 ```
 
-# Run in play with K8s
+## Run in play with K8s
 In browser goto https://labs.play-with-k8s.com/
 Login and start k8s environment
 ```powershell
@@ -66,12 +66,12 @@ git clone https://github.com/Sim007/staticws.git
 kubectl -f staticws.yamld
 ```
 
-# Azure DevOps:
+## Azure DevOps:
 - Azure pipeline
     - Build pipeline
     - Release pipeline
 
-# GitLab CI
+## GitLab CI
 To do  
 
 
