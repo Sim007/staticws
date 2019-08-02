@@ -1,14 +1,19 @@
-This repo is a showcase of staticpage on webserver to show:
+# Staticws (Static webserver)
+This repo is a showcase of staticpage on a webserver.
+We will build a container and run a container on several platforms
 
-Workflow:
-- Clone repo this repo or copy and unpack zip
+## Workflow
+- Clone this repo or copy and unpack zip
 - Open Visual Studio Code
 - Open Docker Desktop
 
-In repo:
+In this repo you find:
 - sources
 - Dockerfile
-- Configuration
+- Configurations files
+
+## Build - Ship - Run in Docker Desktop CLI
+In Docker Desktop we can do the following:
 
 Build container in Docker Desktop
 ```powershell
@@ -20,30 +25,53 @@ docker tag staticws <repo>/staticws:latest
 docker push <repo>/staticws:latest
 docker pull <repo>/staticws:latest
 ```
-
 Run the container with:
 ```powershell
 docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
 ```
+Note: <repo> = name on DockerHub
 
-via Docker Desktop:
-    - with Docker CLI: Docker commands
-    - with Docker CLI: Docker-compose
-    - with kubctl on K8S deploy on docker desktop
+# Run with Docker compose in Docker Desktop CLI 
+```powershell
+cd <directory of repo>
+docker-compose up -d
+```
 
-via Docker Desktop on Azure:
-    - with kubctl on K8S AKS (Azure)
+# Run with K8S in Docker Desktop with Docker Desktop CLI
+```powershell
+cd <directory of repo>
+kubectl -f staticws.yaml
+```
 
-via Play with Docker:
-    - Docker CLI: docker command
-    - Docker CLI: docker-compose
+# Run with K8S in Azure AKS in a CLI
+```powershell
+cd <directory of repo>
+kubectl -f staticws.yaml
+```
+Note: you need a Azure account and AKS cluster
 
-via Azure DevOps:
+# Run in play with Docker
+In browser goto https://labs.play-with-docker.com/
+Login and start Virtual machine
+```powershell
+git clone https://github.com/Sim007/staticws.git 
+docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
+```
+
+# Run in play with K8s
+In browser goto https://labs.play-with-k8s.com/
+Login and start k8s environment
+```powershell
+git clone https://github.com/Sim007/staticws.git 
+kubectl -f staticws.yamld
+```
+
+# Azure DevOps:
 - Azure pipeline
     - Build pipeline
     - Release pipeline
 
-GitLab
+# GitLab CI
 To do  
 
 
