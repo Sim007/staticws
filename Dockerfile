@@ -9,11 +9,11 @@ LABEL MAINTAINER="Johannes Sim" \
 
 # build:  docker image build -t staticws:latest .
 
-# tag:    docker tag staticws sim007/staticws:latest
-# push:   docker push sim007/staticws:latest
-# pull:   docker pull sim007/staticws:latest
+# tag:    docker tag staticws <repo>/staticws:latest
+# push:   docker push <repo>/staticws:latest
+# pull:   docker pull <repo>/staticws:latest
 
-# run:    docker container run --name staticws -d -p 4200:80 sim007/staticws:latest
+# run:    docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
 
 # delete: docker container rm -f staticws
 # in:     docker container exec -it staticws /bin/sh
