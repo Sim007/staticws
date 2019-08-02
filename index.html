@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body onload="myFunction()">
 
 <h1>Hello Static Website</h1>
-
-<p>Continuously Delivered by:</p>
-
 <img src="centric_logo_x2.png" alt="centric.eu">
-
-<p>19 juli 2019 16:30 - Workshop Docker & MS</p>
+<p>Continuously Delivered by: 2 augustus - Workshop Docker & MS</p>
+<p></p>
+<p>Host: 
+<span id="demo"></span>
+</p>
+<script>
+function myFunction() {
+  var x = location.hostname;
+  document.getElementById("demo").innerHTML= x;
+}
+</script>
 </body>
 </html>
