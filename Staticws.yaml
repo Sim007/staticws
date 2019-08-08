@@ -5,7 +5,7 @@ metadata:
   labels:
     app: staticws  
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: staticws
@@ -17,6 +17,7 @@ spec:
       containers:
       - name: staticws
         image: sim007/staticws:latest
+        imagePullPolicy: Always
         ports:
         -  containerPort: 80
 ---
