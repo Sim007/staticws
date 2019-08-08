@@ -16,8 +16,7 @@ spec:
     spec:
       containers:
       - name: staticws
-        image: sim007/staticws:latest
-        imagePullPolicy: Always
+        image: sim007/staticws
         ports:
         -  containerPort: 80
 ---
