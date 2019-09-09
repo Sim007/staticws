@@ -7,7 +7,7 @@ COPY index.html *.png /usr/share/nginx/html/
 LABEL MAINTAINER="Johannes Sim" \
       REFRESHED_AT="2019-08-02"
 
-# build:  docker image build -t staticws:latest .
+# build:  docker image build -t staticws .
 
 # tag:    docker tag staticws <repo>/staticws:latest
 # push:   docker push <repo>/staticws:latest
@@ -18,11 +18,7 @@ LABEL MAINTAINER="Johannes Sim" \
 # delete: docker container rm -f staticws
 # in:     docker container exec -it staticws /bin/sh
 
-# compose: docker-compose up -d
+# compose:docker-compose up -d
+# compose:docker-compose down
 
-
-# Azure registry example
-# build:  docker image build -t centricms.azurecr.io/staticws/staticws:latest .
-# push :  docker push centricms.azurecr.io/staticws:latest
-# pull :  docker pull centricms.azurecr.io/staticws:latest
-# run  :  docker container run --name staticws -d -p 4200:80 centricms.azurecr.io/staticws/staticws:latest
+# buildx: docker buildx build -t staticwsx .
