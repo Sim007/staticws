@@ -1,6 +1,6 @@
 # Staticws (Static webserver)
 This repo is a showcase of staticpage on a webserver.
-We will build a container and run a container on several platforms
+We will build a container image and run a container on several platforms
 
 ## Workflow
 - Clone this repo or copy and unpack zip
