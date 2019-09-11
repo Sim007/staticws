@@ -3,7 +3,7 @@ This repo is a showcase of staticpage on a webserver.
 We will build a container image and run a container on several platforms
 
 ## Workflow
-- Clone this repo or copy and unpack zip
+- Clone this repo or copy and unpack the zip
 - Open Visual Studio Code
 - Open Docker Desktop
 
@@ -15,11 +15,11 @@ In this repo you find:
 ## Build - Ship - Run in Docker Desktop CLI
 In Docker Desktop we can do the following:
 
-Build container in Docker Desktop
+Build container image:
 ```powershell
 docker image build -t staticws:latest .
 ```
-Ship container to Docker Hub via Docker Desktop
+Ship container to Docker Hub:
 ```powershell
 docker tag staticws <repo>/staticws:latest
 docker push <repo>/staticws:latest
@@ -46,7 +46,7 @@ kubectl -f staticws.yaml
 ## Run with K8S in Azure AKS in a CLI
 ```powershell
 cd <directory of repo>
-kubectl -f staticws.yaml
+kubectl -f staticws4Azure.yaml
 ```
 Note: you need a Azure account and AKS cluster
 
@@ -63,7 +63,7 @@ In browser goto https://labs.play-with-k8s.com/
 Login and start k8s environment
 ```powershell
 git clone https://github.com/Sim007/staticws.git 
-kubectl -f staticws.yamld
+kubectl -f staticws.yaml
 ```
 
 ## Azure DevOps:
