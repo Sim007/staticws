@@ -1,11 +1,11 @@
 # Staticws (Static webserver)
 This repo is a showcase of staticpage on a webserver.
-We will build a container image and run a container on several platforms
+We will build a container image and run a container on several platforms.
 
 In this repo you find:
 - sources
 - Dockerfile
-- Configurations files
+- configuration files
 
 ## Workflow
 - Clone this repo or copy and unpack the zip
@@ -19,7 +19,7 @@ Build container image:
 ```powershell
 docker image build -t staticws:latest .
 ```
-Ship container to Docker Hub:
+Ship container image to Docker Hub:
 ```powershell
 docker tag staticws <repo>/staticws:latest
 docker push <repo>/staticws:latest
@@ -29,7 +29,9 @@ Run the container with:
 ```powershell
 docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
 ```
-Note: <repo> = name on DockerHub
+Notes:
+port = port on host
+repo = name on Docker Hub
 
 ## Run with Docker compose in Docker Desktop CLI 
 ```powershell
