@@ -61,7 +61,7 @@ docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
 ```
 
 ## Run in play with K8s
-In browser goto https://labs.play-with-k8s.com/
+In browser goto https://labs.play-with-k8s.com/  
 Login and start k8s environment
 ```powershell
 git clone https://github.com/Sim007/staticws.git 
