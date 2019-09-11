@@ -30,8 +30,8 @@ Run the container with:
 docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
 ```
 Notes:  
-port = port on host  
-repo = name on Docker Hub
+- port = port on host  
+- repo = name on Docker Hub
 
 ## Run with Docker compose in Docker CLI 
 ```powershell
