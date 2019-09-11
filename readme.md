@@ -2,15 +2,15 @@
 This repo is a showcase of staticpage on a webserver.
 We will build a container image and run a container on several platforms
 
-## Workflow
-- Clone this repo or copy and unpack the zip
-- Open Visual Studio Code
-- Open Docker Desktop
-
 In this repo you find:
 - sources
 - Dockerfile
 - Configurations files
+
+## Workflow
+- Clone this repo or copy and unpack the zip
+- Open Visual Studio Code
+- Open Docker Desktop
 
 ## Build - Ship - Run in Docker Desktop CLI
 In Docker Desktop we can do the following:
