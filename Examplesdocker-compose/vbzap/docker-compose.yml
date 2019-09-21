@@ -1,0 +1,13 @@
+version: '2.4'
+services:
+  zap: 
+    image: owasp/zap2docker-stable
+    ports:
+    - 9080:8080
+    - 9090:8090
+    user: zap
+    entrypoint: zap-webswing.sh
+
+# # docker-compose up -d
+# docker run -u zap -p 8080:8080 -p 8090:8090 -i owasp/zap2docker-stable zap-webswing.sh
+ 
