@@ -1,0 +1,7 @@
+version: '2.4'
+services:
+  staticws: 
+    image: sim007/staticws:$WebVersion
+    # ports are concatenated 
+    ports: 
+    - 4201:80
