@@ -42,12 +42,56 @@ in browser: http://localhost:4220
 ```
 
 ## Run with K8S in Docker Desktop with Docker CLI
-```powershell
-cd <directory of repo>
-kubectl -f staticws.yaml
-in browser http://localhost:4223
-```
+The k8s cluster must be running in Docker Desktop.
 
+### Some k8s cluster commands
+With CLI command kubectl (Docker Desktop has installed it for you with the access stuff)
+Open the kubernetes version with:
+```
+kubectl version
+```
+To get help:
+```
+kubectl --help
+```
+  
+You can show the clusters you can manage with kubectl with:
+```
+kubectl config get-contexts
+```
+Choose the correct cluster with:
+```
+kubectl config use docker-desktop
+```
+Show how many nodes there are with:
+```
+kubectl get nodes
+```
+### Run pod (container) the docker style way
+You can run a container the docker way:
+```
+kubectl run staticwsink8s --image=sim007/staticws --port=4203 --expose=true
+```
+K8s is a cluster - we have a service (loadbalancer) - to access staticws from a browser:
+```
+kubectl expose deployment staticwsink8s --type=LoadBalancer --type=LoadBalancer --port=4203 --target-port=80
+```
+You can open staticws in a browser:
+```
+https:\\localhost:4203
+```
+### Run staticws
+We define our desired state in a k8s yaml with resource deployment and service
+
+Goto directory of staticws with k8s yaml.
+Start the staticews with:
+```powershell
+kubectl -f staticws.yaml
+```
+Check staticws in browser with:
+```
+http://localhost:4223
+```
 ## Run with K8S in Azure AKS in a Docker CLI
 ```powershell
 cd <directory of repo>
