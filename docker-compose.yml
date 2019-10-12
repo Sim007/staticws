@@ -1,6 +1,7 @@
 version: '2.4'
 services:
   staticws:
+    build: .
     image: sim007/staticws:$WebVersion
     ports:
     - 4220:80

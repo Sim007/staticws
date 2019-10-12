@@ -79,4 +79,15 @@ kubectl -f staticws.yaml
 ## GitLab CI
 To do  
 
+## Build staticws within docker-compose
+In a developer use case it is handy to also have building the container image in docker-compose
+
+In the docker-compose there is line
+```
+build: .
+```
+If the container image is not present in docker or docker registry it will build the container image and tag as you gedefined in keyword image in docker-compose.
+
+Note the following 
+
 
