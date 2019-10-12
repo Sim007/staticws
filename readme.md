@@ -86,8 +86,20 @@ In the docker-compose there is line
 ```
 build: .
 ```
-If the container image is not present in docker or docker registry it will build the container image and tag as you gedefined in keyword image in docker-compose.
+If the container image is not present in docker or docker registry it will build the container image and tag as you defined in keyword image in docker-compose.
 
-Note the following 
+If make you make a change you can build with the following docker-compose command:
+```
+docker compose up --build
+```
+
+If only want to build give:
+```
+docker-compose build
+```
+This the same as:
+```
+docker build -t <repo>/name .
+```
 
 
