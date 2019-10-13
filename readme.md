@@ -80,6 +80,17 @@ You can open staticws in a browser:
 ```
 https:\\localhost:4203
 ```
+You can check the resources with:
+```
+kubectl get deployments
+kubectl get services
+```
+You can delete the deployment and service with:
+```
+kubectl delete deployment staticwsink8s
+kubectl delete service staticwsink8s
+```
+
 ### Run staticws the declarative way
 We define our desired state in a k8s yaml with the resources:
 - deployment and 
@@ -96,6 +107,17 @@ kubectl -f staticws.yaml
 Check staticws in a browser with:
 ```
 http://localhost:4223
+```
+You can check the resources with:
+```
+kubectl get all
+kubectl get deployments
+kubectl get services
+```
+You can delete the deployment and service with:
+```
+kubectl delete deployment staticws-deployment
+kubectl delete service staticws-service
 ```
 ## Run with K8S in Azure AKS in a Docker CLI
 Your can reach AKS on Azure with your kubectl. 
