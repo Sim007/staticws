@@ -41,7 +41,7 @@ docker-compose up -d
 in browser: http://localhost:4220
 ```
 
-## Run with K8S in Docker Desktop with Docker CLI
+## Run in Docker Desktop k8s with kubectl
 The k8s cluster must be running in Docker Desktop.
 
 ### Some k8s cluster commands
@@ -72,7 +72,7 @@ You can run a container the docker way:
 ```
 kubectl run staticwsink8s --image=sim007/staticws --port=4203 --expose=true
 ```
-K8s is a cluster - we have a service (loadbalancer) - to access staticws from a browser:
+K8s is a cluster - we have define a service (loadbalancer) - to access staticws from a browser:
 ```
 kubectl expose deployment staticwsink8s --type=LoadBalancer --type=LoadBalancer --port=4203 --target-port=80
 ```
