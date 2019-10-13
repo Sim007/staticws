@@ -114,9 +114,9 @@ docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
 ```
 
 ## Run in "play with K8s" (or "katacode")
-In browser goto https://labs.play-with-k8s.com/(or https://www.katacoda.com/courses/kubernetes/playground)
+In browser goto https://labs.play-with-k8s.com and https://www.katacoda.com/courses/kubernetes/playground)
 
-Login and start k8s environment
+Login and start a k8s environment
 ```powershell
 git clone https://github.com/Sim007/staticws.git 
 kubectl -f staticws.yaml
