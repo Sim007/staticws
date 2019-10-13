@@ -42,11 +42,11 @@ in browser: http://localhost:4220
 ```
 
 ## Run in Docker Desktop k8s with kubectl
-The k8s cluster must be running in Docker Desktop.
+The k8s cluster runs in Docker Desktop.
 
 ### Some k8s cluster commands
-With CLI command kubectl (Docker Desktop has installed it for you with the access stuff)
-Open the kubernetes version with:
+With CLI command kubectl (Docker Desktop has installed it for you)  
+With kubectl version we check if k8s is working:
 ```
 kubectl version
 ```
@@ -67,8 +67,8 @@ Show how many nodes there are with:
 ```
 kubectl get nodes
 ```
-### Run pod (container) the docker style way
-You can run a container the docker way:
+### Run pod (container) the imperative way
+You can run a container the imperative (Docker) way:
 ```
 kubectl run staticwsink8s --image=sim007/staticws --port=4203 --expose=true
 ```
