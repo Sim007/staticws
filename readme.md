@@ -80,15 +80,17 @@ You can open staticws in a browser:
 ```
 https:\\localhost:4203
 ```
-### Run staticws
-We define our desired state in a k8s yaml with resource deployment and service
+### Run staticws the declarative
+We define our desired state in a k8s yaml with resources:
+- deployment and 
+- service
 
 Goto directory of staticws with k8s yaml.
-Start the staticews with:
+Deploy staticws with:
 ```powershell
 kubectl -f staticws.yaml
 ```
-Check staticws in browser with:
+Check staticws in a browser with:
 ```
 http://localhost:4223
 ```
