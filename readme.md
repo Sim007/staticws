@@ -78,7 +78,7 @@ kubectl get nodes
 ### Run pod (container) the imperative way
 You can run a container the imperative (Docker) way:
 ```
-kubectl run staticwsink8s --image=sim007/staticws --port=4203 --expose=true
+kubectl run staticwsink8s --image=sim007/staticws --port=4202
 ```
 K8s is a cluster. We have define a service (loadbalancer) to access staticws from a browser:
 ```
