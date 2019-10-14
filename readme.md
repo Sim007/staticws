@@ -4,6 +4,7 @@ We will build a container image push it to Docker Hub and run a container on:
 - docker desktop with docker CLI
 - docker desktop with docker-compose CLI
 - docker desktop k8s cluster with kubectl CLI
+- run on AKS (Azure kubernetes)
 - run on play with docker
 - run on play with k8s 
 
