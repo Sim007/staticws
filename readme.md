@@ -129,19 +129,30 @@ Note: you need an Azure account and an AKS cluster
 
 ## Run in "play with Docker"
 In browser goto https://labs.play-with-docker.com/  
+
 Login and start Virtual machine
+
 ```powershell
 git clone https://github.com/Sim007/staticws.git 
 docker container run --name staticws -d -p <port>:80 <repo>/staticws:latest
+```
+### run with docker-compose
+You can also start staticws with docker-compose. You need docker-compose file.
+```
+docker-compose up
 ```
 
 ## Run in "play with K8s" (or "katacode")
 In browser goto https://labs.play-with-k8s.com and https://www.katacoda.com/courses/kubernetes/playground)
 
+Remember you only need:
+- container images in container registry
+- config files
+The k8s yaml is available on github. You can give the yaml in command. Go to yaml file in github and click the button raw and use this URL.
+
 Login and start a k8s environment
 ```powershell
-git clone https://github.com/Sim007/staticws.git 
-kubectl -f staticws.yaml
+kubectl -f https://raw.githubusercontent.com/Sim007/staticws/master/Staticws.yaml
 ```
 
 ## Azure DevOps:
