@@ -82,7 +82,7 @@ kubectl run staticwsink8s --image=sim007/staticws --port=4203 --expose=true
 ```
 K8s is a cluster. We have define a service (loadbalancer) to access staticws from a browser:
 ```
-kubectl expose deployment staticwsink8s --type=LoadBalancer --type=LoadBalancer --port=4203 --target-port=80
+kubectl expose deployment staticwsink8s --type=LoadBalancer --port=4203 --target-port=80
 ```
 You can open staticws in a browser:
 ```
@@ -110,7 +110,7 @@ kubectl config use <cluster>
 ```
 Deploy staticws with:
 ```powershell
-kubectl -f staticws.yaml
+kubectl apply -f staticws.yaml
 ```
 Check staticws in a browser with:
 ```
@@ -131,7 +131,7 @@ kubectl delete service staticws-service
 Your can reach AKS on Azure with your kubectl. 
 Goto directory where staticws4Azure.yaml is
 ```powershell
-kubectl -f staticws4Azure.yaml
+kubectl apply -f staticws4Azure.yaml
 ```
 Note: you need an Azure account and an AKS cluster
 
