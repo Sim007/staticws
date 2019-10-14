@@ -1,18 +1,23 @@
 # Staticws (Static webserver)
 This repo is a showcase of staticpage on a webserver.
-We will build a container image and run a container on several platforms.
+We will build a container image push it to Docker Hub and run a container on:
+- docker desktop with docker CLI
+- docker desktop with docker-compose CLI
+- docker desktop k8s cluster with kubectl CLI
+- run on play with docker
+- run on play with k8s 
 
 In this repo you find:
 - sources
 - Dockerfile
 - configuration files
 
-## Workflow
+## Workflow for Docker desktop
 - Clone this repo or copy and unpack the zip
 - Open Visual Studio Code
 - Open Docker Desktop
 
-## Build - Ship - Run in Docker CLI
+## Build - Ship - Run with Docker CLI
 In Docker Desktop we can do the following:
 
 Build container image:
@@ -40,6 +45,8 @@ cd <directory of repo>
 docker-compose up -d
 in browser: http://localhost:4220
 ```
+You can also build a container image with docker-compose. Read more: [Docker-compose with build](./Examples/vbcomposebuild/readme.md)
+
 
 ## Run in Docker Desktop k8s with kubectl
 The k8s cluster runs in Docker Desktop.
@@ -163,5 +170,4 @@ kubectl -f https://raw.githubusercontent.com/Sim007/staticws/master/Staticws.yam
 ## GitLab CI
 To do  
 
-[Docker-compose with build](./Examples/vbcomposebuild/readme.md)
-[portainer](./Examples/vbportainer/readme.md)
+- [portainer](./Examples/vbportainer/readme.md)
