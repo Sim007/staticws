@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: staticws-deployment
+  name: staticws
   labels:
     app: staticws
 spec:
