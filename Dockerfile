@@ -1,7 +1,7 @@
 # Showcase Static Website
 # with tag latest
 
-FROM nginx:stable-alpine
+FROM nginx:stable
 COPY index.html *.png /usr/share/nginx/html/
 RUN sed -i s/containername/$HOSTNAME/ /usr/share/nginx/html/index.html
 
