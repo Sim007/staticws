@@ -17,6 +17,8 @@ spec:
       containers:
       - name: staticws
         image: sim007/staticws:latest
+        command: ["/bin/sed"]
+        args: ["-i", "s/containername/$HOSTNAME/", "/usr/share/nginx/html/index.html"]
         # imagePullPolicy: Always
         ports:
         - containerPort: 80
