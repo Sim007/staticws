@@ -7,13 +7,19 @@
 <p>Continuously Delivered by: Johannes Sim in 2020</p>
 <p></p>
 <p>Host: 
-<span id="demo"></span>
+<span id="host"></span>
+</p>
+<p>Hostname: 
+<span id="hostname"></span>
 </p>
 </p>Container(Pod): containername</p>
+
 <script>
 function myFunction() {
-  var x = location.hostname;
-  document.getElementById("demo").innerHTML= x;
+  var x = location.host;
+  document.getElementById("host").innerHTML= x;
+  var y = location.hostname;
+  document.getElementById("hostname").innerHTML= y;
 }
 </script>
 </body>

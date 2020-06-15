@@ -2,7 +2,9 @@
 # with tag latest
 
 FROM nginx:stable-alpine
-COPY index.html *.png /usr/share/nginx/html/
+COPY index.html *.png start.sh /usr/share/nginx/html/
+
+# CMD ["sh","/usr/share/nginx/html/start.sh"]
 
 LABEL MAINTAINER="Johannes Sim" \
       REFRESHED_AT="2020-06-03"
