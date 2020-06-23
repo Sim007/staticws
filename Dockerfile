@@ -3,6 +3,7 @@
 
 FROM nginx:stable-alpine
 COPY index.html *.png start.sh /usr/share/nginx/html/
+CMD ["nginx", "-g", "daemon off;"]
 
 # CMD ["sh","/usr/share/nginx/html/start.sh"]
 
