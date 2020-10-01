@@ -3,12 +3,12 @@
 
 FROM nginx:stable-alpine
 COPY index.html *.png start.sh /usr/share/nginx/html/
-CMD ["nginx", "-g", "daemon off;"]
+#CMD ["nginx", "-g", "daemon off;"]
 
-# CMD ["sh","/usr/share/nginx/html/start.sh"]
+CMD ["sh","/usr/share/nginx/html/start.sh"]
 
 LABEL MAINTAINER="Johannes Sim" \
-      REFRESHED_AT="2020-06-03"
+      REFRESHED_AT="2020-10-01"
 
 # build:  docker image build -t staticws .
 
