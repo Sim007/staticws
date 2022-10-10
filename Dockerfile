@@ -8,7 +8,11 @@ COPY index.html *.png start.sh /usr/share/nginx/html/
 CMD ["sh","/usr/share/nginx/html/start.sh"]
 
 LABEL MAINTAINER="Johannes Sim" \
+<<<<<<< HEAD
       REFRESHED_AT="2022-01-11"
+=======
+      REFRESHED_AT="2022-01-21"
+>>>>>>> 2d74ac707e203bc612a24731708320e4639ece92
 
 # build:  docker image build -t staticws .
 
