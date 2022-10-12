@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: staticws
+  name: staticws-deployment-Azure
   labels:
     app: staticws
 spec:
@@ -16,11 +16,18 @@ spec:
     spec:
       containers:
       - name: staticws
-        image: sim007/staticws:latest
-        #command: [/usr/share/nginx/html/start.sh]
+        image: sim007/staticws:2020
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        #imagePullPolicy: Always
         ports:
-        - containerPort: 80
-        # imagePullPolicy: Always 
+        -  containerPort: 80 
+        #command: [/usr/share/nginx/html/start.sh 
 ---             
 apiVersion: v1       
 kind: Service
