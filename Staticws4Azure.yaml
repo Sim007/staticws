@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: staticws-deployment-azure
+  name: staticws
   labels:
     app: staticws
 spec:
@@ -32,7 +32,7 @@ spec:
 apiVersion: v1       
 kind: Service
 metadata:
-  name: public-staticws
+  name: staticws-public
 spec:
   type: LoadBalancer
   ports:
