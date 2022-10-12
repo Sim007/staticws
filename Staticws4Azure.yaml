@@ -5,7 +5,7 @@ metadata:
   labels:
     app: staticws
 spec:
-  replicas: 10
+  replicas: 4
   selector:
     matchLabels:
       app: staticws
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: staticws
-        image: sim007/staticws:2020
+        image: sim007/staticws:2022
         resources:
           requests:
             memory: "64Mi"
@@ -32,7 +32,7 @@ spec:
 apiVersion: v1       
 kind: Service
 metadata:
-  name: staticws
+  name: public-staticws
 spec:
   type: LoadBalancer
   ports:
