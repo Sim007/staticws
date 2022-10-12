@@ -27,7 +27,6 @@ spec:
         #imagePullPolicy: Always
         ports:
         -  containerPort: 80 
-        #command: [/usr/share/nginx/html/start.sh 
 ---             
 apiVersion: v1       
 kind: Service
