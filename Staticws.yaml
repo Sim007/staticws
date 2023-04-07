@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: staticws
-        image: sim007/staticws:2022
+        image: sim007/staticws:2023
         resources:
           requests:
             memory: "64Mi"
