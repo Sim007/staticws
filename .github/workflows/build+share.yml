@@ -10,8 +10,9 @@ jobs:
     steps:
       - name: Display Repository Name
         run: |
-          echo "Repository Name: ${{ github.repository }}"
+          echo "Repository: ${{ github.repository }}"
           echo "Repository Name: ${{ github.repository_name }}"
+          echo "Repository Owner: ${{ github.repository_owner }}"
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Set up Docker Buildx
