@@ -163,6 +163,15 @@ Login and start a k8s environment
 kubectl -f https://raw.githubusercontent.com/Sim007/staticws/master/Staticws.yaml
 ```
 
+## GitHub Actions
+
+### demo
+
+### pipeline build, tag and push registry
+
+### pipeline deploy
+
+
 ## Azure DevOps:
 - Azure pipeline
     - Build pipeline
