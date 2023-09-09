@@ -3,7 +3,7 @@ name: Build+share
 on:
   push:
     branches:
-      - main  # Change this to your main branch name
+      - master  # Change this to your main branch name
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
