@@ -8,7 +8,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
-      - name: Display Repository Name
+      - name: Display Variables
         run: |
           echo "Repository: ${{ github.repository }}"
           echo "Repository Name: ${{ github.repository_name }}"
