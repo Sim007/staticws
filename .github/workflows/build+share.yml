@@ -8,14 +8,16 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     steps:
+      - name: Display Repository Name
+        run: |
+          echo "Repository Name: ${{ github.repository }}"
+          echo "Repository Name: ${{ github.repository_name }}"
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
       - name: Build Docker image
         run:
-          echo github.repository_owner
-          echo github.repository_names
           docker buildx create --use
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
