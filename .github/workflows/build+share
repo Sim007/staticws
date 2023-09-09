@@ -1,4 +1,5 @@
-name: Build and Push Docker Container to GitHub Package Registry
+name: Build+share
+# version 0.0.1
 
 on:
   push:
