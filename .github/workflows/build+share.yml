@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Display Variables
-        run:
+        run: |
           echo "Repository: ${{ github.repository }}"
           echo "Repository Owner: ${{ github.repository_owner }}"
       - name: Checkout code
