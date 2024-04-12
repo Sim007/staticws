@@ -2,6 +2,7 @@
 # with tag latest
 
 FROM nginx:1.25.4-alpine-slim
+USER nginxuser
 COPY index.html *.png start.sh /usr/share/nginx/html/
 #CMD ["nginx", "-g", "daemon off;"]
 
