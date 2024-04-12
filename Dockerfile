@@ -1,14 +1,14 @@
 # Showcase Static Website
 # with tag latest
 
-FROM nginx:stable-alpine
+FROM nginx:1.25.4-alpine-slim
 COPY index.html *.png start.sh /usr/share/nginx/html/
 #CMD ["nginx", "-g", "daemon off;"]
 
 CMD ["sh","/usr/share/nginx/html/start.sh"]
 
 LABEL MAINTAINER="Johannes Sim" \
-      REFRESHED_AT="2023-04-07"
+      REFRESHED_AT="2024-04-12"
 
 # build:  docker image build -t staticws .
 
