@@ -4,13 +4,15 @@
 FROM nginx:1.25.4-alpine-slim
 
 # Voeg een non-rootgebruiker toe
-RUN adduser --system --shell /bin/bash --no-create-home --disabled-password --group myuser
+RUN adduser -D -H -u 1001 -s /sbin/nologin myuser
 
-# Wijzig de eigenaar van de Nginx-configuratie
-RUN chown myuser:myuser /etc/nginx/nginx.conf
+# Wijzig de eigenaar van de bestanden naar de niet-rootgebruiker
+RUN chown -R myuser:myuser /usr/share/nginx/html
+
+COPY index.html *.png start.sh /usr/share/nginx/html/
 
 USER myuser
-COPY index.html *.png start.sh /usr/share/nginx/html/
+
 #CMD ["nginx", "-g", "daemon off;"]
 
 CMD ["sh","/usr/share/nginx/html/start.sh"]
