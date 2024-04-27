@@ -2,7 +2,14 @@
 # with tag latest
 
 FROM nginx:1.25.4-alpine-slim
-USER nginxuser
+
+# Voeg een non-rootgebruiker toe
+RUN adduser --system --shell /bin/bash --no-create-home --disabled-password --group myuser
+
+# Wijzig de eigenaar van de Nginx-configuratie
+RUN chown myuser:myuser /etc/nginx/nginx.conf
+
+USER myuser
 COPY index.html *.png start.sh /usr/share/nginx/html/
 #CMD ["nginx", "-g", "daemon off;"]
 
